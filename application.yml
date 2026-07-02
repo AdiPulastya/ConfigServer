@@ -16,6 +16,16 @@ management:
       enabled: true
     config:
       enabled: false
+
+logging:
+  level:
+    root: INFO
+  file:
+    name: logs/${spring.application.name}.log
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} : %msg%n"
+    console: "%d{HH:mm:ss} %-5level %logger{36} : %msg%n"
+    
 PRODUCT_SERVICE_ID : PRODUCT-SERVICE
 CARD_ORDER_SERVICE_ID : CART-ORDER-SERVICE
 INVENTORY_SERVICE_ID : INVENTORY-SERVICE
